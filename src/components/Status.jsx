@@ -26,6 +26,44 @@ const rows = [
   createData("Tylenol", 66, "McKesson", 7, "Being prepared"),
 ];
 
+const status = [
+  {
+    item: "Band-aid",
+    ordered_quantity: 22,
+    supplier: "McKesson",
+    eta: 3,
+    status: "Recieved",
+  },
+  {
+    item: "Saline",
+    ordered_quantity: 7,
+    supplier: "McKesson",
+    eta: 7,
+    status: "In Tansit",
+  },
+  {
+    item: "Thermometer",
+    ordered_quantity: 44,
+    supplier: "McKesson",
+    eta: 1,
+    status: "Out for delivery",
+  },
+  {
+    item: "Blankets",
+    ordered_quantity: 55,
+    supplier: "McKesson",
+    eta: null,
+    status: "Canceled",
+  },
+  {
+    item: "Tylenol",
+    ordered_quantity: 66,
+    supplier: "McKesson",
+    eta: 7,
+    status: "Being prepared",
+  },
+];
+
 export default function Cart() {
   return (
     <div style={{ margin: "2rem", width: "100%" }}>
@@ -41,13 +79,13 @@ export default function Cart() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {status.map((row) => (
               <TableRow
                 key={row.name}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell align="center">{row.name}</TableCell>
-                <TableCell align="center">{row.ordered_quanity}</TableCell>
+                <TableCell align="center">{row.item}</TableCell>
+                <TableCell align="center">{row.ordered_quantity}</TableCell>
                 <TableCell align="center">{row.supplier}</TableCell>
                 <TableCell align="center">{row.eta}</TableCell>
                 <TableCell align="center">

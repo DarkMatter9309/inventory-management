@@ -21,12 +21,45 @@ function createData(name, use, cost, ordered_quanity) {
 const rows = [
   createData("Band-aid", "Injury", 2, 400),
   createData("Saline", "Sinuses, Dehydration", 8, 300),
-  createData("Thermometer", "Check Temperature", 15, 60),
+  createData("Thermometer", "Body Temperature", 15, 60),
   createData("Blankets", "Control Temperature", 6, 90),
-  createData("Tylenol", "Headache", 22, 60),
+  createData("Blankets", "Headache", 22, 60),
 ];
 
-export default function Cart() {
+let cart = [
+  {
+    item: "Band-aid",
+    use: "Injury",
+    price_per_item: 2,
+    ordered_quanity: 400,
+  },
+  {
+    item: "Saline",
+    use: "Sinuses, Dehydration",
+    price_per_item: 8,
+    ordered_quanity: 300,
+  },
+  {
+    item: "Thermometer",
+    use: "Body Temperature",
+    price_per_item: 15,
+    ordered_quanity: 60,
+  },
+  {
+    item: "Blankets",
+    use: "Control Temperature",
+    price_per_item: 2,
+    ordered_quanity: 400,
+  },
+  {
+    item: "Blankets",
+    use: "Headache",
+    price_per_item: 22,
+    ordered_quanity: 60,
+  },
+];
+
+export default function Cart(props) {
   return (
     <div style={{ margin: "2rem", width: "100%" }}>
       <TableContainer component={Paper}>
@@ -45,17 +78,17 @@ export default function Cart() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {cart.map((row) => (
               <TableRow
-                key={row.name}
+                key={row.item}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
               >
-                <TableCell align="center">{row.name}</TableCell>
+                <TableCell align="center">{row.item}</TableCell>
                 <TableCell align="center">{row.use}</TableCell>
-                <TableCell align="center">{row.cost}</TableCell>
+                <TableCell align="center">{row.price_per_item}</TableCell>
                 <TableCell align="center">{row.ordered_quanity}</TableCell>
                 <TableCell align="center">
-                  {row.ordered_quanity * row.cost}
+                  {row.ordered_quanity * row.price_per_item}
                 </TableCell>
                 <TableCell align="center">
                   <Button>Confirm</Button>

@@ -34,6 +34,8 @@ const rows = [
   createData("Tylenol", 356, 16.0, 49, 60, 3),
 ];
 
+const requirements = [{}];
+
 export default function Requirements() {
   return (
     <div style={{ margin: "2rem", width: "100%" }}>

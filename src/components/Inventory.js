@@ -16,6 +16,8 @@ const inventory = [
     max_quantity: 1500,
     time_to_recieve: 3,
     priority: "Medium",
+    recommended_order_quantity: 100,
+    daily_use: 10,
   },
   {
     item_name: "Saline ",
@@ -29,6 +31,8 @@ const inventory = [
     max_quantity: 1000,
     time_to_recieve: 6,
     priority: "High",
+    recommended_order_quantity: 100,
+    daily_use: 10,
   },
   {
     item_name: "Thermometer",
@@ -42,6 +46,8 @@ const inventory = [
     max_quantity: 140,
     time_to_recieve: 10,
     priority: "Low",
+    recommended_order_quantity: 100,
+    daily_use: 10,
   },
   {
     item_name: "Blankets",
@@ -55,6 +61,8 @@ const inventory = [
     max_quantity: 300,
     time_to_recieve: 15,
     priority: "Medium",
+    recommended_order_quantity: 100,
+    daily_use: 10,
   },
   {
     item_name: "Tylenol",
@@ -68,6 +76,8 @@ const inventory = [
     max_quantity: 600,
     time_to_recieve: 7,
     priority: "High",
+    recommended_order_quantity: 100,
+    daily_use: 10,
   },
   {
     item_name: "B12",
@@ -81,6 +91,8 @@ const inventory = [
     max_quantity: 100,
     time_to_recieve: 2,
     priority: "Low",
+    recommended_order_quantity: 100,
+    daily_use: 10,
   },
   {
     item_name: "Oral syringe",
@@ -94,6 +106,8 @@ const inventory = [
     max_quantity: 100,
     time_to_recieve: 3,
     priority: 1,
+    recommended_order_quantity: 100,
+    daily_use: 10,
   },
   {
     item_name: "Big Mac",
@@ -107,6 +121,8 @@ const inventory = [
     max_quantity: 5,
     time_to_recieve: 0.05,
     priority: "Very High",
+    recommended_order_quantity: 100,
+    daily_use: 10,
   },
 ];
 const Inventory = (props) => {
